@@ -1,2 +1,6 @@
 .DS_Store
 .idea
+/src/storage/*
+/src/vendor
+/src/.env
+/mysql/*

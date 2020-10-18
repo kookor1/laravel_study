@@ -4,7 +4,7 @@ networks:
   laravel:
 
 services:
-  site:
+  app:
     build:
       context: .
       dockerfile: nginx.dockerfile
@@ -35,6 +35,8 @@ services:
       SERVICE_NAME: mysql
     networks:
       - laravel
+    volumes:
+      - ./mysql:/var/lib/mysql
 
   php:
     build:
@@ -64,7 +66,7 @@ services:
     entrypoint: ['composer', '--ignore-platform-reqs']
 
   npm:
-    image: node:13.7
+    image: node:latest
     container_name: npm
     volumes:
       - ./src:/var/www/html
