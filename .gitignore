@@ -3,4 +3,4 @@
 /src/storage/*
 /src/vendor
 /src/.env
-/mysql/*
+/mysql/
